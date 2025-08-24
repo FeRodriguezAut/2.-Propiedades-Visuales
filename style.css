@@ -1,0 +1,286 @@
+/* ===== ESTILOS GENERALES DE LA PÁGINA ===== */
+
+/* Estilos básicos del cuerpo de la página */
+body {
+    /* Fuente de texto */
+    font-family: Arial, sans-serif;
+    /* Imagen de fondo */
+    background-image: url('https://e0.pxfuel.com/wallpapers/644/990/desktop-wallpaper-naruto-akatsuki-anime-naruto-akatsuki-dark.jpg');
+    /* Cubrir toda la pantalla */
+    background-size: cover;
+    /* Fijar la imagen para que no se mueva al hacer scroll - EFECTO PARALLAX */
+    background-attachment: fixed;
+    /* Centrar la imagen */
+    background-position: center;
+    /* No repetir la imagen */
+    background-repeat: no-repeat;
+    /* Color de respaldo por si la imagen no carga */
+    background-color: #f5f5f5;
+    /* Quitar márgenes por defecto */
+    margin: 0;
+    /* Agregar espacio interno */
+    padding: 20px;
+    /* Altura mínima para que cubra toda la pantalla */
+    min-height: 100vh;
+}
+
+/* Estilo del título principal */
+h1 {
+    /* Centrar el texto */
+    text-align: center;
+    /* Color del texto */
+    color: white;
+    /* Espacio debajo del título */
+    margin-bottom: 30px;
+    /* Tamaño de fuente */
+    font-size: 2.5em;
+    /* Sombra de texto para mejor legibilidad */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Peso de la fuente */
+    font-weight: bold;
+}
+
+/* ===== CONTENEDOR DE TARJETAS ===== */
+
+/* Contenedor para organizar las tarjetas */
+.contenedor-tarjetas {
+    /* Usar flexbox para organizar las tarjetas */
+    display: flex;
+    /* Centrar las tarjetas horizontalmente */
+    justify-content: center;
+    /* Espacio entre las tarjetas */
+    gap: 20px;
+    /* Permitir que las tarjetas se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap;
+    /* Ancho máximo del contenedor */
+    max-width: 1200px;
+    /* Centrar el contenedor */
+    margin: 0 auto;
+    /* Agregar más espacio para ver el efecto de scroll */
+    margin-bottom: 100px;
+}
+
+/* ===== ESTILOS DE CADA TARJETA ===== */
+
+/* Estilos de cada tarjeta individual */
+.tarjeta {
+    /* Ancho fijo de la tarjeta */
+    width: 250px;
+    /* Color de fondo de la tarjeta */
+    background-color: white;
+    /* Bordes redondeados */
+    border-radius: 15px;
+    /* Sombra para dar efecto 3D */
+    box-shadow: 0 4px 15px rgba(105, 2, 2, 0.1);
+    /* Ocultar contenido que se salga de la tarjeta */
+    overflow: hidden;
+    /* Transición suave para efectos */
+    transition: all 0.3s ease;
+    /* Borde sutil */
+    border: 1px solid #b90000;
+}
+
+/* ===== ESTILOS DE LA IMAGEN ===== */
+
+/* Estilos de la imagen */
+.imagen-tarjeta {
+    /* Ancho completo de la tarjeta */
+    width: 80%;
+    /* Altura fija más pequeña para evitar desbordamiento */
+    height: 500px;
+    /* Hacer que la imagen cubra todo el espacio */
+    object-fit: cover;
+    /* Transición suave */
+    transition: transform 0.3s ease;
+    /* Centrar la imagen */
+    object-position: center;
+    /* Asegurar que no se desborde */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* ===== CONTENIDO DE LA TARJETA ===== */
+
+/* Contenido de la tarjeta (texto y botón) */
+.contenido-tarjeta {
+    /* Espacio interno */
+    padding: 20px;
+}
+
+/* Título de la tarjeta */
+.titulo-tarjeta {
+    /* Color del texto */
+    color: #2c3e50;
+    /* Tamaño de fuente */
+    font-size: 1.4em;
+    /* Espacio debajo del título */
+    margin-bottom: 12px;
+    /* Peso de la fuente */
+    font-weight: bold;
+    /* Altura de línea */
+    line-height: 1.2;
+}
+
+/* Descripción de la tarjeta */
+.descripcion-tarjeta {
+    /* Color del texto */
+    color: #7f8c8d;
+    /* Altura de línea para mejor legibilidad */
+    line-height: 1.6;
+    /* Espacio debajo de la descripción */
+    margin-bottom: 20px;
+    /* Tamaño de fuente */
+    font-size: 0.95em;
+}
+
+/* ===== ESTILOS DEL BOTÓN ===== */
+
+/* Botón de la tarjeta */
+.boton-tarjeta {
+    /* Color de fondo del botón */
+    background-color: #3498db;
+    /* Color del texto del botón */
+    color: white;
+    /* Quitar borde por defecto */
+    border: none;
+    /* Espacio interno */
+    padding: 12px 24px;
+    /* Bordes redondeados */
+    border-radius: 8px;
+    /* Cambiar cursor a mano */
+    cursor: pointer;
+    /* Tamaño de fuente */
+    font-size: 14px;
+    /* Peso de la fuente */
+    font-weight: 600;
+    /* Transición suave */
+    transition: all 0.3s ease;
+    /* Ancho completo del botón */
+    width: 100%;
+    /* Texto en mayúsculas */
+    text-transform: uppercase;
+    /* Espaciado entre letras */
+    letter-spacing: 0.5px;
+}
+
+/* ===== SECCIÓN EXTRA PARA DEMOSTRAR EFECTO ===== */
+
+/* Sección adicional para demostrar el efecto de scroll */
+.seccion-extra {
+    /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Bordes redondeados */
+    border-radius: 15px;
+    /* Padding interno */
+    padding: 40px;
+    /* Margen superior */
+    margin-top: 50px;
+    /* Ancho máximo */
+    max-width: 800px;
+    /* Centrar */
+    margin-left: auto;
+    margin-right: auto;
+    /* Sombra */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    /* Borde */
+    border: 2px solid #b90000;
+}
+
+/* Título de la sección extra */
+.seccion-extra h2 {
+    /* Color del texto */
+    color: #2c3e50;
+    /* Centrar */
+    text-align: center;
+    /* Tamaño de fuente */
+    font-size: 2em;
+    /* Margen inferior */
+    margin-bottom: 20px;
+    /* Sombra de texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafo de la sección extra */
+.seccion-extra p {
+    /* Color del texto */
+    color: #555;
+    /* Tamaño de fuente */
+    font-size: 1.1em;
+    /* Altura de línea */
+    line-height: 1.6;
+    /* Margen inferior */
+    margin-bottom: 30px;
+    /* Centrar */
+    text-align: center;
+}
+
+/* Contenedor de información */
+.info-efecto {
+    /* Fondo más claro */
+    background-color: rgba(52, 152, 219, 0.1);
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Padding interno */
+    padding: 25px;
+    /* Borde */
+    border: 1px solid #3498db;
+}
+
+/* Título de la información */
+.info-efecto h3 {
+    /* Color del texto */
+    color: #2c3e50;
+    /* Tamaño de fuente */
+    font-size: 1.3em;
+    /* Margen inferior */
+    margin-bottom: 15px;
+    /* Centrar */
+    text-align: center;
+}
+
+/* Lista de información */
+.info-efecto ul {
+    /* Lista sin viñetas */
+    list-style: none;
+    /* Padding */
+    padding: 0;
+}
+
+/* Elementos de la lista */
+.info-efecto li {
+    /* Color del texto */
+    color: #555;
+    /* Tamaño de fuente */
+    font-size: 1em;
+    /* Altura de línea */
+    line-height: 1.8;
+    /* Margen inferior */
+    margin-bottom: 8px;
+    /* Padding izquierdo */
+    padding-left: 20px;
+    /* Posición relativa para el pseudo-elemento */
+    position: relative;
+}
+
+/* Viñeta personalizada */
+.info-efecto li::before {
+    /* Contenido */
+    content: "•";
+    /* Color */
+    color: #3498db;
+    /* Posición */
+    position: absolute;
+    /* Izquierda */
+    left: 0;
+    /* Tamaño de fuente */
+    font-size: 1.2em;
+    /* Peso de la fuente */
+    font-weight: bold;
+}
+
+
+
+
+
+
