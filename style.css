@@ -80,6 +80,148 @@ h1 {
     border: 1px solid #b90000;
 }
 
+/* ===== GRADIENTES PARA CADA TARJETA ===== */
+
+/* Gradiente LINEAL para Itachi Uchiha - Rojo y negro (tema Akatsuki) */
+.tarjeta:nth-child(1) {
+    /* Gradiente lineal diagonal rojo a negro */
+    background: linear-gradient(135deg, #b90000, #8b0000, #2c2c2c);
+    /* Color de texto blanco para mejor contraste */
+    color: white;
+}
+
+/* Gradiente RADIAL para Hidan - Rojo oscuro y gris */
+.tarjeta:nth-child(2) {
+    /* Gradiente radial desde el centro hacia afuera */
+    background: radial-gradient(circle, #8b0000, #4a4a4a, #2c2c2c);
+    /* Color de texto blanco */
+    color: white;
+}
+
+/* Tarjeta 3 - Sin gradiente (fondo blanco original) */
+.tarjeta:nth-child(3) {
+    /* Mantener el fondo blanco original */
+    background-color: white;
+    /* Color de texto original */
+    color: #2c3e50;
+}
+
+/* Tarjeta 4 - Sin gradiente (fondo blanco original) */
+.tarjeta:nth-child(4) {
+    /* Mantener el fondo blanco original */
+    background-color: white;
+    /* Color de texto original */
+    color: #2c3e50;
+}
+
+/* ===== AJUSTES DE TEXTO PARA GRADIENTES ===== */
+
+/* Título de la tarjeta con gradiente (solo cartas 1 y 2) */
+.tarjeta:nth-child(1) .titulo-tarjeta,
+.tarjeta:nth-child(2) .titulo-tarjeta {
+    /* Color del texto blanco para gradientes */
+    color: white;
+    /* Sombra de texto para mejor legibilidad */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Descripción de la tarjeta con gradiente (solo cartas 1 y 2) */
+.tarjeta:nth-child(1) .descripcion-tarjeta,
+.tarjeta:nth-child(2) .descripcion-tarjeta {
+    /* Color del texto más claro para gradientes */
+    color: #e0e0e0;
+    /* Sombra de texto sutil */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== EFECTOS HOVER CON GRADIENTES ===== */
+
+/* Efecto hover para Itachi (gradiente lineal) */
+.tarjeta:nth-child(1):hover {
+    /* Gradiente lineal más intenso al hacer hover */
+    background: linear-gradient(135deg, #ff0000, #b90000, #1a1a1a);
+    /* Transformar la tarjeta */
+    transform: translateY(-10px);
+    /* Sombra más pronunciada */
+    box-shadow: 0 8px 25px rgba(185, 0, 0, 0.4);
+}
+
+/* Efecto hover para Hidan (gradiente radial) */
+.tarjeta:nth-child(2):hover {
+    /* Gradiente radial más intenso al hacer hover */
+    background: radial-gradient(circle, #b90000, #6b0000, #1a1a1a);
+    /* Transformar la tarjeta */
+    transform: translateY(-10px);
+    /* Sombra más pronunciada */
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
+}
+
+/* Efecto hover para tarjetas sin gradiente (3 y 4) */
+.tarjeta:nth-child(3):hover,
+.tarjeta:nth-child(4):hover {
+    /* Transformar la tarjeta */
+    transform: translateY(-10px);
+    /* Sombra más pronunciada */
+    box-shadow: 0 8px 25px rgba(105, 2, 2, 0.3);
+    /* Borde más visible */
+    border-color: #3498db;
+}
+
+/* ===== BOTONES ADAPTADOS PARA GRADIENTES ===== */
+
+/* Botón para Itachi (gradiente lineal) */
+.tarjeta:nth-child(1) .boton-tarjeta {
+    /* Gradiente lineal en el botón */
+    background: linear-gradient(to right, #b90000, #8b0000);
+    /* Borde */
+    border: 2px solid #ff0000;
+    /* Sombra */
+    box-shadow: 0 4px 8px rgba(185, 0, 0, 0.3);
+}
+
+/* Botón para Hidan (gradiente radial) */
+.tarjeta:nth-child(2) .boton-tarjeta {
+    /* Gradiente radial en el botón */
+    background: radial-gradient(circle, #8b0000, #4a4a4a);
+    /* Borde */
+    border: 2px solid #b90000;
+    /* Sombra */
+    box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
+}
+
+/* Botones para tarjetas sin gradiente (3 y 4) - mantener estilo original */
+.tarjeta:nth-child(3) .boton-tarjeta,
+.tarjeta:nth-child(4) .boton-tarjeta {
+    /* Mantener el estilo original del botón */
+    background-color: #3498db;
+    /* Borde original */
+    border: none;
+    /* Sombra original */
+    box-shadow: none;
+}
+
+/* Efecto hover en botones con gradientes */
+.tarjeta:nth-child(1) .boton-tarjeta:hover,
+.tarjeta:nth-child(2) .boton-tarjeta:hover {
+    /* Transformar el botón */
+    transform: translateY(-2px);
+    /* Sombra más pronunciada */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    /* Escalar ligeramente */
+    scale: 1.05;
+}
+
+/* Efecto hover en botones sin gradiente */
+.tarjeta:nth-child(3) .boton-tarjeta:hover,
+.tarjeta:nth-child(4) .boton-tarjeta:hover {
+    /* Color de fondo más oscuro */
+    background-color: #2980b9;
+    /* Transformar el botón */
+    transform: translateY(-2px);
+    /* Sombra */
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
 /* ===== ESTILOS DE LA IMAGEN ===== */
 
 /* Estilos de la imagen */
@@ -277,6 +419,268 @@ h1 {
     font-size: 1.2em;
     /* Peso de la fuente */
     font-weight: bold;
+}
+
+/* ===== SECCIÓN EXPLICATIVA DE GRADIENTES ===== */
+
+/* Sección de gradientes */
+.seccion-gradientes {
+    /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Bordes redondeados */
+    border-radius: 15px;
+    /* Padding interno */
+    padding: 40px;
+    /* Margen superior */
+    margin-top: 50px;
+    /* Ancho máximo */
+    max-width: 1000px;
+    /* Centrar */
+    margin-left: auto;
+    margin-right: auto;
+    /* Sombra */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    /* Borde */
+    border: 2px solid #b90000;
+}
+
+/* Título de la sección de gradientes */
+.seccion-gradientes h2 {
+    /* Color del texto */
+    color: #2c3e50;
+    /* Centrar */
+    text-align: center;
+    /* Tamaño de fuente */
+    font-size: 2.2em;
+    /* Margen inferior */
+    margin-bottom: 20px;
+    /* Sombra de texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafo introductorio */
+.seccion-gradientes > p {
+    /* Color del texto */
+    color: #555;
+    /* Tamaño de fuente */
+    font-size: 1.1em;
+    /* Altura de línea */
+    line-height: 1.6;
+    /* Margen inferior */
+    margin-bottom: 30px;
+    /* Centrar */
+    text-align: center;
+}
+
+/* Contenedor de ejemplos de gradientes */
+.ejemplos-gradientes {
+    /* Usar grid para organizar los ejemplos */
+    display: grid;
+    /* 2 columnas en pantallas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Espacio entre elementos */
+    gap: 25px;
+    /* Margen inferior */
+    margin-bottom: 40px;
+}
+
+/* Cada ejemplo de gradiente */
+.ejemplo-gradiente {
+    /* Fondo más claro */
+    background-color: rgba(52, 152, 219, 0.05);
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Padding interno */
+    padding: 20px;
+    /* Borde */
+    border: 1px solid #3498db;
+    /* Centrar contenido */
+    text-align: center;
+}
+
+/* Título del ejemplo */
+.ejemplo-gradiente h3 {
+    /* Color del texto */
+    color: #2c3e50;
+    /* Tamaño de fuente */
+    font-size: 1.3em;
+    /* Margen inferior */
+    margin-bottom: 15px;
+}
+
+/* Muestra visual del gradiente */
+.muestra-gradiente {
+    /* Altura fija */
+    height: 60px;
+    /* Bordes redondeados */
+    border-radius: 8px;
+    /* Margen inferior */
+    margin-bottom: 15px;
+    /* Sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Borde */
+    border: 2px solid #ddd;
+}
+
+/* Gradiente de Itachi */
+.itachi-gradiente {
+    background: linear-gradient(135deg, #b90000, #8b0000, #2c2c2c);
+}
+
+/* Gradiente de Hidan */
+.hidan-gradiente {
+    background: radial-gradient(circle, #8b0000, #4a4a4a, #2c2c2c);
+}
+
+/* Eliminar los gradientes que ya no usamos */
+/* .pain-gradiente y .nuevo-gradiente ya no se necesitan */
+
+/* Código CSS del gradiente */
+.ejemplo-gradiente code {
+    /* Color de fondo */
+    background-color: #f8f9fa;
+    /* Color del texto */
+    color: #e83e8c;
+    /* Padding */
+    padding: 5px 8px;
+    /* Bordes redondeados */
+    border-radius: 4px;
+    /* Tamaño de fuente */
+    font-size: 0.9em;
+    /* Borde */
+    border: 1px solid #dee2e6;
+    /* Mostrar como bloque */
+    display: block;
+    /* Margen */
+    margin: 10px 0;
+    /* Fuente monoespaciada */
+    font-family: 'Courier New', monospace;
+}
+
+/* Descripción del gradiente */
+.ejemplo-gradiente p:last-child {
+    /* Color del texto */
+    color: #666;
+    /* Tamaño de fuente */
+    font-size: 0.9em;
+    /* Altura de línea */
+    line-height: 1.5;
+    /* Margen superior */
+    margin-top: 10px;
+}
+
+/* Información general sobre gradientes */
+.info-gradientes {
+    /* Fondo más claro */
+    background-color: rgba(52, 152, 219, 0.1);
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Padding interno */
+    padding: 25px;
+    /* Borde */
+    border: 1px solid #3498db;
+}
+
+/* Título de la información */
+.info-gradientes h3 {
+    /* Color del texto */
+    color: #2c3e50;
+    /* Tamaño de fuente */
+    font-size: 1.4em;
+    /* Margen inferior */
+    margin-bottom: 15px;
+    /* Centrar */
+    text-align: center;
+}
+
+/* Párrafo de la información */
+.info-gradientes p {
+    /* Color del texto */
+    color: #555;
+    /* Tamaño de fuente */
+    font-size: 1em;
+    /* Altura de línea */
+    line-height: 1.6;
+    /* Margen inferior */
+    margin-bottom: 20px;
+}
+
+/* Subtítulo */
+.info-gradientes h4 {
+    /* Color del texto */
+    color: #2c3e50;
+    /* Tamaño de fuente */
+    font-size: 1.1em;
+    /* Margen inferior */
+    margin-bottom: 10px;
+    /* Margen superior */
+    margin-top: 20px;
+}
+
+/* Lista de direcciones */
+.info-gradientes ul {
+    /* Lista sin viñetas */
+    list-style: none;
+    /* Padding */
+    padding: 0;
+    /* Margen inferior */
+    margin-bottom: 20px;
+}
+
+/* Elementos de la lista */
+.info-gradientes li {
+    /* Color del texto */
+    color: #555;
+    /* Tamaño de fuente */
+    font-size: 1em;
+    /* Altura de línea */
+    line-height: 1.8;
+    /* Margen inferior */
+    margin-bottom: 8px;
+    /* Padding izquierdo */
+    padding-left: 20px;
+    /* Posición relativa para el pseudo-elemento */
+    position: relative;
+}
+
+/* Viñeta personalizada para la lista de gradientes */
+.info-gradientes li::before {
+    /* Contenido */
+    content: "→";
+    /* Color */
+    color: #3498db;
+    /* Posición */
+    position: absolute;
+    /* Izquierda */
+    left: 0;
+    /* Tamaño de fuente */
+    font-size: 1.1em;
+    /* Peso de la fuente */
+    font-weight: bold;
+}
+
+/* Código de sintaxis */
+.info-gradientes code {
+    /* Color de fondo */
+    background-color: #f8f9fa;
+    /* Color del texto */
+    color: #e83e8c;
+    /* Padding */
+    padding: 8px 12px;
+    /* Bordes redondeados */
+    border-radius: 6px;
+    /* Tamaño de fuente */
+    font-size: 1em;
+    /* Borde */
+    border: 1px solid #dee2e6;
+    /* Mostrar como bloque */
+    display: block;
+    /* Margen */
+    margin: 10px 0;
+    /* Fuente monoespaciada */
+    font-family: 'Courier New', monospace;
+    /* Centrar */
+    text-align: center;
 }
 
 
