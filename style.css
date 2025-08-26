@@ -1,14 +1,17 @@
 /* ===== ESTILOS GENERALES ===== */
 
-/* Estilos básicos del cuerpo de la página */
-body { 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-.playfair-display-<uniquifier> {
+
+/* Fuente personalizada Playfair Display */
+.playfair-display {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 900;
     font-style: normal;
-  }
+}
+
+/* Estilos básicos del cuerpo de la página */
+body { 
     /* ===== FONDO CON IMAGEN ===== */
     background-image: url('https://e0.pxfuel.com/wallpapers/644/990/desktop-wallpaper-naruto-akatsuki-anime-naruto-akatsuki-dark.jpg');
     /* Cubrir toda la pantalla */
@@ -23,7 +26,7 @@ body {
     background-color: #2c3e50;
     margin: 0;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.6; 
     /* Altura mínima para que cubra toda la pantalla */
     min-height: 100vh;
 }
@@ -31,9 +34,9 @@ body {
 /* Título principal */
 h1 {
     text-align: center;
-    color: white; /* Cambiar a blanco para mejor contraste */
+    color: white;
     margin-bottom: 30px;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra más fuerte */
     font-weight: bold;
 }
@@ -49,6 +52,9 @@ h1 {
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 50px;
+    background-color: rgba(41, 40, 40, 0.212); /* Fondo negro semitransparente */
+    padding: 20px;
+    
 }
 
 /* ===== ESTILOS DE TARJETAS ===== */
@@ -56,7 +62,8 @@ h1 {
 /* Estilos básicos de cada tarjeta */
 .tarjeta {
     width: 280px;
-    background-color: white;
+    background-color: #f4f4f4c5; /* Fondo gris claro hexadecimal */
+    color: #333333; /* Color de texto oscuro hexadecimal por defecto */
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
     overflow: hidden;
@@ -64,19 +71,6 @@ h1 {
     transition: all 0.3s ease;
 }
 
-/* ===== EFECTOS HOVER EN TARJETAS ===== */
-
-/* Efecto hover general para todas las tarjetas */
-.tarjeta:hover {
-    transform: translateY(-10px); /* Levantar la tarjeta */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
-    border-color: #3498db; /* Borde azul al hacer hover */
-}
-
-/* Efecto hover en la imagen */
-.tarjeta:hover .imagen-tarjeta {
-    transform: scale(1.05); /* Agrandar ligeramente la imagen */
-}
 
 /* ===== GRADIENTES RADIALES ===== */
 
@@ -119,31 +113,31 @@ h1 {
 
 /* Contenido de la tarjeta */
 .contenido-tarjeta {
-    padding: 20px;
+    padding: 1.25em; /* Cambiado de 20px */
 }
 
 /* Título de la tarjeta */
 .titulo-tarjeta {
-    font-size: 1.4em;
-    margin-bottom: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 0.54em; /* Cambiado de 12px */
     font-weight: bold;
 }
 
 /* Descripción de la tarjeta */
 .descripcion-tarjeta {
     line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 0.95em;
+    margin-bottom: 1.26em; /* Cambiado de 20px */
+    font-size: 0.99rem;
 }
 
 /* ===== BOTÓN ===== */
 
 /* Botón de la tarjeta */
 .boton-tarjeta {
-    background-color: #333;
-    color: white;
+    background-color: #e74c3c; /* Color de fondo rojo hexadecimal */
+    color: #ffffff; /* Color de texto blanco hexadecimal */
     border: none;
-    padding: 12px 24px;
+    padding: 0.86em 1.71em; /* Cambiado de 12px 24px */
     border-radius: 8px;
     cursor: pointer;
     width: 100%;
@@ -168,7 +162,7 @@ h1 {
     color: #d73a49;
     padding: 8px 12px;
     border-radius: 6px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     font-family: 'Courier New', monospace;
     display: block;
     margin: 10px 0;
@@ -178,7 +172,7 @@ h1 {
 /* Descripción del ejemplo */
 .ejemplo-gradiente p:last-child {
     color: #666;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     margin-top: 10px;
 }
 
@@ -193,7 +187,7 @@ h1 {
 /* Título de información */
 .info-gradientes h3 {
     color: #2c3e50;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -201,14 +195,14 @@ h1 {
 /* Párrafo de información */
 .info-gradientes p {
     color: #555;
-    font-size: 1em;
+    font-size: 1rem;
     margin-bottom: 20px;
 }
 
 /* Subtítulos */
 .info-gradientes h4 {
     color: #2c3e50;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     margin-bottom: 10px;
     margin-top: 20px;
 }
@@ -223,7 +217,7 @@ h1 {
 /* Elementos de lista */
 .info-gradientes li {
     color: #555;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 8px;
     padding-left: 20px;
@@ -236,7 +230,7 @@ h1 {
     color: #2196f3;
     position: absolute;
     left: 0;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -246,7 +240,7 @@ h1 {
     color: #d73a49;
     padding: 8px 12px;
     border-radius: 6px;
-    font-size: 1em;
+    font-size: 1rem;
     border: 1px solid #dee2e6;
     display: block;
     margin: 10px 0;
@@ -310,8 +304,8 @@ h1 {
     text-transform: none;
     /* SOMBRA: Sombra sutil roja */
     text-shadow: 0.5px 0.5px 1px rgba(185, 0, 0, 0.2);
-    /* Color de texto más oscuro */
-    color: #e9eef3;
+    /* Color de texto en RGB */
+    color: rgb(233, 238, 243);
 }
 
 /* Descripción de Hidan - Estilo agresivo */
@@ -322,8 +316,8 @@ h1 {
     text-transform: none;
     /* SOMBRA: Sombra negra sutil */
     text-shadow: 0.5px 0.5px 1px rgba(247, 4, 4, 0.3);
-    /* Color de texto más intenso */
-    color: #ebedf0;
+    /* Color de texto en RGB */
+    color: rgb(235, 237, 240);
 }
 
 /* Descripción de Pain - Estilo místico */
@@ -334,8 +328,8 @@ h1 {
     text-transform: none;
     /* SOMBRA: Sombra púrpura sutil */
     text-shadow: 0.5px 0.5px 1px rgba(128, 0, 128, 0.2);
-    /* Color de texto elegante */
-    color: #34495e;
+    /* Color de texto en RGB */
+    color: rgb(52, 73, 94);
 }
 
 /* Descripción de Obito - Estilo misterioso */
@@ -346,6 +340,6 @@ h1 {
     text-transform: none;
     /* SOMBRA: Sombra naranja sutil */
     text-shadow: 0.5px 0.5px 1px rgba(255, 165, 0, 0.2);
-    /* Color de texto neutro */
-    color: #7f8c8d;
+    /* Color de texto en RGBA con transparencia */
+    color: rgba(127, 140, 141, 0.9);
 }
