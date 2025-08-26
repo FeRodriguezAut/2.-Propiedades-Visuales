@@ -1,42 +1,40 @@
-/* ===== ESTILOS GENERALES DE LA PÁGINA ===== */
+/* ===== ESTILOS GENERALES ===== */
 
 /* Estilos básicos del cuerpo de la página */
-body {
-    /* Fuente de texto */
-    font-family: Arial, sans-serif;
-    /* Imagen de fondo */
+body { 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.playfair-display-<uniquifier> {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+    /* ===== FONDO CON IMAGEN ===== */
     background-image: url('https://e0.pxfuel.com/wallpapers/644/990/desktop-wallpaper-naruto-akatsuki-anime-naruto-akatsuki-dark.jpg');
     /* Cubrir toda la pantalla */
     background-size: cover;
-    /* Fijar la imagen para que no se mueva al hacer scroll - EFECTO PARALLAX */
+    /* Fijar la imagen para efecto parallax */
     background-attachment: fixed;
     /* Centrar la imagen */
     background-position: center;
     /* No repetir la imagen */
     background-repeat: no-repeat;
     /* Color de respaldo por si la imagen no carga */
-    background-color: #f5f5f5;
-    /* Quitar márgenes por defecto */
+    background-color: #2c3e50;
     margin: 0;
-    /* Agregar espacio interno */
     padding: 20px;
+    line-height: 1.6;
     /* Altura mínima para que cubra toda la pantalla */
     min-height: 100vh;
 }
 
-/* Estilo del título principal */
+/* Título principal */
 h1 {
-    /* Centrar el texto */
     text-align: center;
-    /* Color del texto */
-    color: white;
-    /* Espacio debajo del título */
+    color: white; /* Cambiar a blanco para mejor contraste */
     margin-bottom: 30px;
-    /* Tamaño de fuente */
     font-size: 2.5em;
-    /* Sombra de texto para mejor legibilidad */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Peso de la fuente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra más fuerte */
     font-weight: bold;
 }
 
@@ -44,74 +42,54 @@ h1 {
 
 /* Contenedor para organizar las tarjetas */
 .contenedor-tarjetas {
-    /* Usar flexbox para organizar las tarjetas */
     display: flex;
-    /* Centrar las tarjetas horizontalmente */
     justify-content: center;
-    /* Espacio entre las tarjetas */
     gap: 20px;
-    /* Permitir que las tarjetas se envuelvan en pantallas pequeñas */
     flex-wrap: wrap;
-    /* Ancho máximo del contenedor */
     max-width: 1200px;
-    /* Centrar el contenedor */
     margin: 0 auto;
-    /* Agregar más espacio para ver el efecto de scroll */
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
-/* ===== ESTILOS DE CADA TARJETA ===== */
+/* ===== ESTILOS DE TARJETAS ===== */
 
-/* Estilos de cada tarjeta individual */
+/* Estilos básicos de cada tarjeta */
 .tarjeta {
-    /* Ancho fijo de la tarjeta */
-    width: 250px;
-    /* Color de fondo de la tarjeta */
+    width: 280px;
     background-color: white;
-    /* Bordes redondeados */
     border-radius: 15px;
-    /* Sombra para dar efecto 3D */
-    box-shadow: 0 4px 15px rgba(105, 2, 2, 0.1);
-    /* Ocultar contenido que se salga de la tarjeta */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
     overflow: hidden;
-    /* Transición suave para efectos */
+    border: 1px solid #ddd;
     transition: all 0.3s ease;
-    /* Borde sutil */
-    border: 1px solid #b90000;
 }
 
-/* ===== GRADIENTES PARA CADA TARJETA ===== */
+/* ===== EFECTOS HOVER EN TARJETAS ===== */
 
-/* Gradiente LINEAL para Itachi Uchiha - Rojo y negro (tema Akatsuki) */
+/* Efecto hover general para todas las tarjetas */
+.tarjeta:hover {
+    transform: translateY(-10px); /* Levantar la tarjeta */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    border-color: #3498db; /* Borde azul al hacer hover */
+}
+
+/* Efecto hover en la imagen */
+.tarjeta:hover .imagen-tarjeta {
+    transform: scale(1.05); /* Agrandar ligeramente la imagen */
+}
+
+/* ===== GRADIENTES RADIALES ===== */
+
+/* Primera tarjeta - Gradiente radial azul */
 .tarjeta:nth-child(1) {
-    /* Gradiente lineal diagonal rojo a negro */
-    background: linear-gradient(135deg, #b90000, #8b0000, #2c2c2c);
-    /* Color de texto blanco para mejor contraste */
+    background: radial-gradient(circle, #3498db, #2980b9, #1f4e79);
     color: white;
 }
 
-/* Gradiente RADIAL para Hidan - Rojo oscuro y gris */
+/* Segunda tarjeta - Gradiente radial verde */
 .tarjeta:nth-child(2) {
-    /* Gradiente radial desde el centro hacia afuera */
-    background: radial-gradient(circle, #8b0000, #4a4a4a, #2c2c2c);
-    /* Color de texto blanco */
+    background: radial-gradient(circle, #2ecc71, #27ae60, #1e8449);
     color: white;
-}
-
-/* Tarjeta 3 - Sin gradiente (fondo blanco original) */
-.tarjeta:nth-child(3) {
-    /* Mantener el fondo blanco original */
-    background-color: white;
-    /* Color de texto original */
-    color: #2c3e50;
-}
-
-/* Tarjeta 4 - Sin gradiente (fondo blanco original) */
-.tarjeta:nth-child(4) {
-    /* Mantener el fondo blanco original */
-    background-color: white;
-    /* Color de texto original */
-    color: #2c3e50;
 }
 
 /* ===== AJUSTES DE TEXTO PARA GRADIENTES ===== */
@@ -125,567 +103,249 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Descripción de la tarjeta con gradiente (solo cartas 1 y 2) */
-.tarjeta:nth-child(1) .descripcion-tarjeta,
-.tarjeta:nth-child(2) .descripcion-tarjeta {
-    /* Color del texto más claro para gradientes */
-    color: #e0e0e0;
-    /* Sombra de texto sutil */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
 
-/* ===== EFECTOS HOVER CON GRADIENTES ===== */
-
-/* Efecto hover para Itachi (gradiente lineal) */
-.tarjeta:nth-child(1):hover {
-    /* Gradiente lineal más intenso al hacer hover */
-    background: linear-gradient(135deg, #ff0000, #b90000, #1a1a1a);
-    /* Transformar la tarjeta */
-    transform: translateY(-10px);
-    /* Sombra más pronunciada */
-    box-shadow: 0 8px 25px rgba(185, 0, 0, 0.4);
-}
-
-/* Efecto hover para Hidan (gradiente radial) */
-.tarjeta:nth-child(2):hover {
-    /* Gradiente radial más intenso al hacer hover */
-    background: radial-gradient(circle, #b90000, #6b0000, #1a1a1a);
-    /* Transformar la tarjeta */
-    transform: translateY(-10px);
-    /* Sombra más pronunciada */
-    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
-}
-
-/* Efecto hover para tarjetas sin gradiente (3 y 4) */
-.tarjeta:nth-child(3):hover,
-.tarjeta:nth-child(4):hover {
-    /* Transformar la tarjeta */
-    transform: translateY(-10px);
-    /* Sombra más pronunciada */
-    box-shadow: 0 8px 25px rgba(105, 2, 2, 0.3);
-    /* Borde más visible */
-    border-color: #3498db;
-}
-
-/* ===== BOTONES ADAPTADOS PARA GRADIENTES ===== */
-
-/* Botón para Itachi (gradiente lineal) */
-.tarjeta:nth-child(1) .boton-tarjeta {
-    /* Gradiente lineal en el botón */
-    background: linear-gradient(to right, #b90000, #8b0000);
-    /* Borde */
-    border: 2px solid #ff0000;
-    /* Sombra */
-    box-shadow: 0 4px 8px rgba(185, 0, 0, 0.3);
-}
-
-/* Botón para Hidan (gradiente radial) */
-.tarjeta:nth-child(2) .boton-tarjeta {
-    /* Gradiente radial en el botón */
-    background: radial-gradient(circle, #8b0000, #4a4a4a);
-    /* Borde */
-    border: 2px solid #b90000;
-    /* Sombra */
-    box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
-}
-
-/* Botones para tarjetas sin gradiente (3 y 4) - mantener estilo original */
-.tarjeta:nth-child(3) .boton-tarjeta,
-.tarjeta:nth-child(4) .boton-tarjeta {
-    /* Mantener el estilo original del botón */
-    background-color: #3498db;
-    /* Borde original */
-    border: none;
-    /* Sombra original */
-    box-shadow: none;
-}
-
-/* Efecto hover en botones con gradientes */
-.tarjeta:nth-child(1) .boton-tarjeta:hover,
-.tarjeta:nth-child(2) .boton-tarjeta:hover {
-    /* Transformar el botón */
-    transform: translateY(-2px);
-    /* Sombra más pronunciada */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    /* Escalar ligeramente */
-    scale: 1.05;
-}
-
-/* Efecto hover en botones sin gradiente */
-.tarjeta:nth-child(3) .boton-tarjeta:hover,
-.tarjeta:nth-child(4) .boton-tarjeta:hover {
-    /* Color de fondo más oscuro */
-    background-color: #2980b9;
-    /* Transformar el botón */
-    transform: translateY(-2px);
-    /* Sombra */
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
-}
-
-/* ===== ESTILOS DE LA IMAGEN ===== */
+/* ===== ESTILOS DE IMAGEN ===== */
 
 /* Estilos de la imagen */
 .imagen-tarjeta {
-    /* Ancho completo de la tarjeta */
-    width: 80%;
-    /* Altura fija más pequeña para evitar desbordamiento */
-    height: 500px;
-    /* Hacer que la imagen cubra todo el espacio */
+    width: 50%;
+    height: 350px;
     object-fit: cover;
-    /* Transición suave */
     transition: transform 0.3s ease;
-    /* Centrar la imagen */
-    object-position: center;
-    /* Asegurar que no se desborde */
-    max-width: 100%;
-    max-height: 100%;
 }
 
 
 /* ===== CONTENIDO DE LA TARJETA ===== */
 
-/* Contenido de la tarjeta (texto y botón) */
+/* Contenido de la tarjeta */
 .contenido-tarjeta {
-    /* Espacio interno */
     padding: 20px;
 }
 
 /* Título de la tarjeta */
 .titulo-tarjeta {
-    /* Color del texto */
-    color: #2c3e50;
-    /* Tamaño de fuente */
     font-size: 1.4em;
-    /* Espacio debajo del título */
     margin-bottom: 12px;
-    /* Peso de la fuente */
     font-weight: bold;
-    /* Altura de línea */
-    line-height: 1.2;
 }
 
 /* Descripción de la tarjeta */
 .descripcion-tarjeta {
-    /* Color del texto */
-    color: #7f8c8d;
-    /* Altura de línea para mejor legibilidad */
     line-height: 1.6;
-    /* Espacio debajo de la descripción */
     margin-bottom: 20px;
-    /* Tamaño de fuente */
     font-size: 0.95em;
 }
 
-/* ===== ESTILOS DEL BOTÓN ===== */
+/* ===== BOTÓN ===== */
 
 /* Botón de la tarjeta */
 .boton-tarjeta {
-    /* Color de fondo del botón */
-    background-color: #3498db;
-    /* Color del texto del botón */
+    background-color: #333;
     color: white;
-    /* Quitar borde por defecto */
     border: none;
-    /* Espacio interno */
     padding: 12px 24px;
-    /* Bordes redondeados */
     border-radius: 8px;
-    /* Cambiar cursor a mano */
     cursor: pointer;
-    /* Tamaño de fuente */
-    font-size: 14px;
-    /* Peso de la fuente */
-    font-weight: 600;
-    /* Transición suave */
-    transition: all 0.3s ease;
-    /* Ancho completo del botón */
     width: 100%;
-    /* Texto en mayúsculas */
-    text-transform: uppercase;
-    /* Espaciado entre letras */
-    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-/* ===== SECCIÓN EXTRA PARA DEMOSTRAR EFECTO ===== */
-
-/* Sección adicional para demostrar el efecto de scroll */
-.seccion-extra {
-    /* Fondo semi-transparente */
-    background-color: rgba(255, 255, 255, 0.9);
-    /* Bordes redondeados */
-    border-radius: 15px;
-    /* Padding interno */
-    padding: 40px;
-    /* Margen superior */
-    margin-top: 50px;
-    /* Ancho máximo */
-    max-width: 800px;
-    /* Centrar */
-    margin-left: auto;
-    margin-right: auto;
-    /* Sombra */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    /* Borde */
-    border: 2px solid #b90000;
+/* Gradiente azul */
+.azul-gradiente {
+    background: radial-gradient(circle, #3498db, #2980b9, #1f4e79);
 }
 
-/* Título de la sección extra */
-.seccion-extra h2 {
-    /* Color del texto */
-    color: #2c3e50;
-    /* Centrar */
-    text-align: center;
-    /* Tamaño de fuente */
-    font-size: 2em;
-    /* Margen inferior */
-    margin-bottom: 20px;
-    /* Sombra de texto */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+/* Gradiente verde */
+.verde-gradiente {
+    background: radial-gradient(circle, #2ecc71, #27ae60, #1e8449);
 }
 
-/* Párrafo de la sección extra */
-.seccion-extra p {
-    /* Color del texto */
-    color: #555;
-    /* Tamaño de fuente */
-    font-size: 1.1em;
-    /* Altura de línea */
-    line-height: 1.6;
-    /* Margen inferior */
-    margin-bottom: 30px;
-    /* Centrar */
-    text-align: center;
+/* Código CSS */
+.ejemplo-gradiente code {
+    background-color: #f1f3f4;
+    color: #d73a49;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid #e1e4e8;
 }
 
-/* Contenedor de información */
-.info-efecto {
-    /* Fondo más claro */
-    background-color: rgba(52, 152, 219, 0.1);
-    /* Bordes redondeados */
+/* Descripción del ejemplo */
+.ejemplo-gradiente p:last-child {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Información general */
+.info-gradientes {
+    background-color: #e3f2fd;
     border-radius: 10px;
-    /* Padding interno */
     padding: 25px;
-    /* Borde */
-    border: 1px solid #3498db;
+    border: 1px solid #2196f3;
 }
 
-/* Título de la información */
-.info-efecto h3 {
-    /* Color del texto */
+/* Título de información */
+.info-gradientes h3 {
     color: #2c3e50;
-    /* Tamaño de fuente */
-    font-size: 1.3em;
-    /* Margen inferior */
+    font-size: 1.4em;
     margin-bottom: 15px;
-    /* Centrar */
     text-align: center;
 }
 
-/* Lista de información */
-.info-efecto ul {
-    /* Lista sin viñetas */
-    list-style: none;
-    /* Padding */
-    padding: 0;
+/* Párrafo de información */
+.info-gradientes p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 20px;
 }
 
-/* Elementos de la lista */
-.info-efecto li {
-    /* Color del texto */
+/* Subtítulos */
+.info-gradientes h4 {
+    color: #2c3e50;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Listas */
+.info-gradientes ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* Elementos de lista */
+.info-gradientes li {
     color: #555;
-    /* Tamaño de fuente */
     font-size: 1em;
-    /* Altura de línea */
     line-height: 1.8;
-    /* Margen inferior */
     margin-bottom: 8px;
-    /* Padding izquierdo */
     padding-left: 20px;
-    /* Posición relativa para el pseudo-elemento */
     position: relative;
 }
 
 /* Viñeta personalizada */
-.info-efecto li::before {
-    /* Contenido */
-    content: "•";
-    /* Color */
-    color: #3498db;
-    /* Posición */
-    position: absolute;
-    /* Izquierda */
-    left: 0;
-    /* Tamaño de fuente */
-    font-size: 1.2em;
-    /* Peso de la fuente */
-    font-weight: bold;
-}
-
-/* ===== SECCIÓN EXPLICATIVA DE GRADIENTES ===== */
-
-/* Sección de gradientes */
-.seccion-gradientes {
-    /* Fondo semi-transparente */
-    background-color: rgba(255, 255, 255, 0.95);
-    /* Bordes redondeados */
-    border-radius: 15px;
-    /* Padding interno */
-    padding: 40px;
-    /* Margen superior */
-    margin-top: 50px;
-    /* Ancho máximo */
-    max-width: 1000px;
-    /* Centrar */
-    margin-left: auto;
-    margin-right: auto;
-    /* Sombra */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    /* Borde */
-    border: 2px solid #b90000;
-}
-
-/* Título de la sección de gradientes */
-.seccion-gradientes h2 {
-    /* Color del texto */
-    color: #2c3e50;
-    /* Centrar */
-    text-align: center;
-    /* Tamaño de fuente */
-    font-size: 2.2em;
-    /* Margen inferior */
-    margin-bottom: 20px;
-    /* Sombra de texto */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Párrafo introductorio */
-.seccion-gradientes > p {
-    /* Color del texto */
-    color: #555;
-    /* Tamaño de fuente */
-    font-size: 1.1em;
-    /* Altura de línea */
-    line-height: 1.6;
-    /* Margen inferior */
-    margin-bottom: 30px;
-    /* Centrar */
-    text-align: center;
-}
-
-/* Contenedor de ejemplos de gradientes */
-.ejemplos-gradientes {
-    /* Usar grid para organizar los ejemplos */
-    display: grid;
-    /* 2 columnas en pantallas grandes */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Espacio entre elementos */
-    gap: 25px;
-    /* Margen inferior */
-    margin-bottom: 40px;
-}
-
-/* Cada ejemplo de gradiente */
-.ejemplo-gradiente {
-    /* Fondo más claro */
-    background-color: rgba(52, 152, 219, 0.05);
-    /* Bordes redondeados */
-    border-radius: 10px;
-    /* Padding interno */
-    padding: 20px;
-    /* Borde */
-    border: 1px solid #3498db;
-    /* Centrar contenido */
-    text-align: center;
-}
-
-/* Título del ejemplo */
-.ejemplo-gradiente h3 {
-    /* Color del texto */
-    color: #2c3e50;
-    /* Tamaño de fuente */
-    font-size: 1.3em;
-    /* Margen inferior */
-    margin-bottom: 15px;
-}
-
-/* Muestra visual del gradiente */
-.muestra-gradiente {
-    /* Altura fija */
-    height: 60px;
-    /* Bordes redondeados */
-    border-radius: 8px;
-    /* Margen inferior */
-    margin-bottom: 15px;
-    /* Sombra */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Borde */
-    border: 2px solid #ddd;
-}
-
-/* Gradiente de Itachi */
-.itachi-gradiente {
-    background: linear-gradient(135deg, #b90000, #8b0000, #2c2c2c);
-}
-
-/* Gradiente de Hidan */
-.hidan-gradiente {
-    background: radial-gradient(circle, #8b0000, #4a4a4a, #2c2c2c);
-}
-
-/* Eliminar los gradientes que ya no usamos */
-/* .pain-gradiente y .nuevo-gradiente ya no se necesitan */
-
-/* Código CSS del gradiente */
-.ejemplo-gradiente code {
-    /* Color de fondo */
-    background-color: #f8f9fa;
-    /* Color del texto */
-    color: #e83e8c;
-    /* Padding */
-    padding: 5px 8px;
-    /* Bordes redondeados */
-    border-radius: 4px;
-    /* Tamaño de fuente */
-    font-size: 0.9em;
-    /* Borde */
-    border: 1px solid #dee2e6;
-    /* Mostrar como bloque */
-    display: block;
-    /* Margen */
-    margin: 10px 0;
-    /* Fuente monoespaciada */
-    font-family: 'Courier New', monospace;
-}
-
-/* Descripción del gradiente */
-.ejemplo-gradiente p:last-child {
-    /* Color del texto */
-    color: #666;
-    /* Tamaño de fuente */
-    font-size: 0.9em;
-    /* Altura de línea */
-    line-height: 1.5;
-    /* Margen superior */
-    margin-top: 10px;
-}
-
-/* Información general sobre gradientes */
-.info-gradientes {
-    /* Fondo más claro */
-    background-color: rgba(52, 152, 219, 0.1);
-    /* Bordes redondeados */
-    border-radius: 10px;
-    /* Padding interno */
-    padding: 25px;
-    /* Borde */
-    border: 1px solid #3498db;
-}
-
-/* Título de la información */
-.info-gradientes h3 {
-    /* Color del texto */
-    color: #2c3e50;
-    /* Tamaño de fuente */
-    font-size: 1.4em;
-    /* Margen inferior */
-    margin-bottom: 15px;
-    /* Centrar */
-    text-align: center;
-}
-
-/* Párrafo de la información */
-.info-gradientes p {
-    /* Color del texto */
-    color: #555;
-    /* Tamaño de fuente */
-    font-size: 1em;
-    /* Altura de línea */
-    line-height: 1.6;
-    /* Margen inferior */
-    margin-bottom: 20px;
-}
-
-/* Subtítulo */
-.info-gradientes h4 {
-    /* Color del texto */
-    color: #2c3e50;
-    /* Tamaño de fuente */
-    font-size: 1.1em;
-    /* Margen inferior */
-    margin-bottom: 10px;
-    /* Margen superior */
-    margin-top: 20px;
-}
-
-/* Lista de direcciones */
-.info-gradientes ul {
-    /* Lista sin viñetas */
-    list-style: none;
-    /* Padding */
-    padding: 0;
-    /* Margen inferior */
-    margin-bottom: 20px;
-}
-
-/* Elementos de la lista */
-.info-gradientes li {
-    /* Color del texto */
-    color: #555;
-    /* Tamaño de fuente */
-    font-size: 1em;
-    /* Altura de línea */
-    line-height: 1.8;
-    /* Margen inferior */
-    margin-bottom: 8px;
-    /* Padding izquierdo */
-    padding-left: 20px;
-    /* Posición relativa para el pseudo-elemento */
-    position: relative;
-}
-
-/* Viñeta personalizada para la lista de gradientes */
 .info-gradientes li::before {
-    /* Contenido */
     content: "→";
-    /* Color */
-    color: #3498db;
-    /* Posición */
+    color: #2196f3;
     position: absolute;
-    /* Izquierda */
     left: 0;
-    /* Tamaño de fuente */
     font-size: 1.1em;
-    /* Peso de la fuente */
     font-weight: bold;
 }
 
 /* Código de sintaxis */
 .info-gradientes code {
-    /* Color de fondo */
     background-color: #f8f9fa;
-    /* Color del texto */
-    color: #e83e8c;
-    /* Padding */
+    color: #d73a49;
     padding: 8px 12px;
-    /* Bordes redondeados */
     border-radius: 6px;
-    /* Tamaño de fuente */
     font-size: 1em;
-    /* Borde */
     border: 1px solid #dee2e6;
-    /* Mostrar como bloque */
     display: block;
-    /* Margen */
     margin: 10px 0;
-    /* Fuente monoespaciada */
     font-family: 'Courier New', monospace;
-    /* Centrar */
     text-align: center;
 }
-a
 
+/* ===== ESTILOS ESPECÍFICOS POR PERSONAJE ===== */
 
+/* ITACHI UCHIHA - Estilo elegante y misterioso */
+.titulo-tarjeta.titulo-tarjeta-itachi {
+    text-transform: uppercase;           /* ITACHI UCHIHA */
+    letter-spacing: 3px;                 /* Espaciado amplio para elegancia */
+    text-shadow: 
+        2px 2px 4px rgba(185, 0, 0, 0.6),    /* Sombra roja principal */
+        0 0 10px rgba(185, 0, 0, 0.3);       /* Resplandor rojo sutil */
+    color: #b90000 !important;               /* Color rojo Akatsuki */
+    font-weight: 800;                         /* Peso fuerte */
+} 
 
+/* HIDAN - Estilo agresivo y peligroso */
+.titulo-tarjeta.titulo-tarjeta-hidan {
+    text-transform: uppercase;           /* HIDAN */
+    letter-spacing: 4px;                 /* Espaciado muy amplio para intimidación */
+    text-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.8),      /* Sombra negra intensa */
+        1px 1px 2px rgba(139, 0, 0, 0.9);    /* Sombra roja secundaria */
+    color: #8b0000 !important;               /* Color rojo oscuro */
+    font-weight: 900;                         /* Peso extra fuerte */
+}
 
+/* PAIN - Estilo místico y poderoso */
+.titulo-tarjeta.titulo-tarjeta-pain {
+    text-transform: capitalize;          /* Pain */
+    letter-spacing: 2px;                 /* Espaciado moderado pero elegante */
+    text-shadow: 
+        2px 2px 4px rgba(128, 0, 128, 0.7),  /* Sombra púrpura Rinnegan */
+        0 0 15px rgba(128, 0, 128, 0.4);     /* Resplandor púrpura */
+    color: #800080 !important;               /* Color púrpura */
+    font-weight: 700;                         /* Peso fuerte */
+}
 
+/* OBITO - Estilo misterioso y dual */
+.titulo-tarjeta.titulo-tarjeta-obito {
+    text-transform: uppercase;           /* OBITO */
+    letter-spacing: 2.5px;               /* Espaciado variable para dualidad */
+    text-shadow: 
+        2px 2px 4px rgba(255, 165, 0, 0.6),  /* Sombra naranja Kamui */
+        0 0 12px rgba(255, 165, 0, 0.3);     /* Resplandor naranja */
+    color: #ff8c00 !important;               /* Color naranja */
+    font-weight: 600;                         /* Peso medio-fuerte */
+}
 
+/* ===== ESTILOS ESPECÍFICOS PARA DESCRIPCIONES ===== */
+
+/* Descripción de Itachi - Estilo elegante */
+.tarjeta:nth-child(1) .descripcion-tarjeta {
+    /* ESPACIADO: Espaciado cómodo para lectura */
+    letter-spacing: 0.4px;
+    /* TRANSFORMACIÓN: Sin transformación para legibilidad */
+    text-transform: none;
+    /* SOMBRA: Sombra sutil roja */
+    text-shadow: 0.5px 0.5px 1px rgba(185, 0, 0, 0.2);
+    /* Color de texto más oscuro */
+    color: #e9eef3;
+}
+
+/* Descripción de Hidan - Estilo agresivo */
+.tarjeta:nth-child(2) .descripcion-tarjeta {
+    /* ESPACIADO: Espaciado compacto para intensidad */
+    letter-spacing: 0.2px;
+    /* TRANSFORMACIÓN: Sin transformación */
+    text-transform: none;
+    /* SOMBRA: Sombra negra sutil */
+    text-shadow: 0.5px 0.5px 1px rgba(247, 4, 4, 0.3);
+    /* Color de texto más intenso */
+    color: #ebedf0;
+}
+
+/* Descripción de Pain - Estilo místico */
+.tarjeta:nth-child(3) .descripcion-tarjeta {
+    /* ESPACIADO: Espaciado amplio para elegancia */
+    letter-spacing: 0.5px;
+    /* TRANSFORMACIÓN: Sin transformación */
+    text-transform: none;
+    /* SOMBRA: Sombra púrpura sutil */
+    text-shadow: 0.5px 0.5px 1px rgba(128, 0, 128, 0.2);
+    /* Color de texto elegante */
+    color: #34495e;
+}
+
+/* Descripción de Obito - Estilo misterioso */
+.tarjeta:nth-child(4) .descripcion-tarjeta {
+    /* ESPACIADO: Espaciado variable */
+    letter-spacing: 0.3px;
+    /* TRANSFORMACIÓN: Sin transformación */
+    text-transform: none;
+    /* SOMBRA: Sombra naranja sutil */
+    text-shadow: 0.5px 0.5px 1px rgba(255, 165, 0, 0.2);
+    /* Color de texto neutro */
+    color: #7f8c8d;
+}

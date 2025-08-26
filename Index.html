@@ -1,46 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia De Css2</title>
-    <!-- Vincular archivo CSS externo -->
+    <title>Guía de Gradientes Radial - CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
    
-    <h1>Tarjetas de Personajes</h1>
+    <h1>Tarjetas de Personajes con Gradientes</h1>
     
-   
     <div class="contenedor-tarjetas">
         
-        
+        <!-- Primera tarjeta con gradiente radial azul -->
         <div class="tarjeta">
-            
             <img src="Itachi_Uchiha_Png_Picture_-_Itachi_Uchiha_Full_Body__Transparent_Png_1354x2988__-_PngFind-removebg-preview.png" 
                  alt="Itachi Uchiha" 
                  class="imagen-tarjeta">
             
             <div class="contenido-tarjeta">
-                <h3 class="titulo-tarjeta">Itachi Uchiha</h3>
+                <h3 class="titulo-tarjeta titulo-itachi">Itachi Uchiha</h3>
                 <p class="descripcion-tarjeta">Miembro del clan Uchiha y ex-miembro de Akatsuki. Conocido por su gran poder y sacrificio.</p>
-                <button class="boton-tarjeta">este es un cambio</button>
+                <button class="boton-tarjeta">Ver más</button>
             </div>
         </div>
 
-       
+        <!-- Segunda tarjeta con gradiente radial verde -->
         <div class="tarjeta">
             <img src="Naruto_Shippuden_Hidan__Akatsuki__by_iEnniDESIGN_on_DeviantArt-removebg-preview.png" 
                  alt="Hidan" 
                  class="imagen-tarjeta">
             <div class="contenido-tarjeta">
-                <h3 class="titulo-tarjeta">Hidan</h3>
+                <h3 class="titulo-tarjeta titulo-hidan">Hidan</h3>
                 <p class="descripcion-tarjeta">Miembro inmortal de Akatsuki. Utiliza técnicas de maldición y es extremadamente peligroso.</p>
-                <button class="boton-tarjeta">este es otro cambio</button>
+                <button class="boton-tarjeta">Ver más</button>
             </div>
         </div>
 
-        
+        <!-- Tercera tarjeta sin gradiente (fondo blanco) -->
         <div class="tarjeta">
             <img src="Pain_Naruto_Png_-_Pain_Akatsuki__Transparent_Png_553x934__-_PngFind-removebg-preview.png" 
                  alt="Pain" 
@@ -52,77 +49,16 @@
             </div>
         </div>
 
-        
+        <!-- Cuarta tarjeta sin gradiente (fondo blanco) -->
         <div class="tarjeta"> 
             <img src="c115d5bcf98c8fc0ef58a68b4e45f42e-removebg-preview.png" 
                  alt="Obito" 
                  class="imagen-tarjeta">
             <div class="contenido-tarjeta">
                 <h3 class="titulo-tarjeta">Obito</h3>
-                <p class="descripcion-tarjeta">compañero de equipo de Kakashi Hatake y Rin, bajo la tutela de Minato</p>
-                <button class="boton-tarjeta">Ultimo cambio</button>
+                <p class="descripcion-tarjeta">Compañero de equipo de Kakashi Hatake y Rin, bajo la tutela de Minato.</p>
+                <button class="boton-tarjeta">Ver más</button>
             </div>
         </div>
 
-    </div>
-
-    <!-- Sección adicional para demostrar el efecto de scroll -->
-    <div class="seccion-extra">
-        <h2>Efecto de Desplazamiento (Background-Attachment)</h2>
-        <p>Esta sección te permite ver cómo funciona el efecto de desplazamiento. La imagen de fondo permanece fija mientras haces scroll.</p>
-        <div class="info-efecto">
-            <h3>Tipos de Background-Attachment:</h3>
-            <ul>
-                <li><strong>fixed:</strong> La imagen permanece fija (efecto parallax)</li>
-                <li><strong>scroll:</strong> La imagen se mueve con el contenido</li>
-                <li><strong>local:</strong> La imagen se mueve con el elemento</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Sección explicativa sobre gradientes lineales -->
-    <div class="seccion-gradientes">
-        <h2>Gradientes en las Tarjetas</h2>
-        <p>Cada tarjeta tiene un tipo de gradiente diferente para demostrar las variaciones:</p>
-        
-        <div class="ejemplos-gradientes">
-            <div class="ejemplo-gradiente">
-                <h3>Itachi Uchiha - Gradiente Lineal</h3>
-                <div class="muestra-gradiente itachi-gradiente"></div>
-                <p><code>linear-gradient(135deg, #b90000, #8b0000, #2c2c2c)</code></p>
-                <p>Gradiente lineal diagonal rojo a negro - representa su lado oscuro y el tema Akatsuki</p>
-            </div>
-            
-            <div class="ejemplo-gradiente">
-                <h3>Hidan - Gradiente Radial</h3>
-                <div class="muestra-gradiente hidan-gradiente"></div>
-                <p><code>radial-gradient(circle, #8b0000, #4a4a4a, #2c2c2c)</code></p>
-                <p>Gradiente radial desde el centro hacia afuera - representa su naturaleza mortal</p>
-            </div>
-        </div>
-        
-        <div class="info-gradientes">
-            <h3>¿Qué son los Gradientes?</h3>
-            <p>Un gradiente es una transición suave entre colores que crea efectos visuales atractivos.</p>
-            
-            <h4>Tipos de Gradientes:</h4>
-            <ul>
-                <li><strong>Linear-gradient:</strong> Transición en línea recta (horizontal, vertical o diagonal)</li>
-                <li><strong>Radial-gradient:</strong> Transición desde el centro hacia afuera (circular o elíptico)</li>
-            </ul>
-            
-            <h4>Direcciones comunes para gradientes lineales:</h4>
-            <ul>
-                <li><strong>to right:</strong> Izquierda a derecha</li>
-                <li><strong>to bottom:</strong> Arriba a abajo</li>
-                <li><strong>45deg:</strong> Diagonal a 45 grados</li>
-                <li><strong>135deg:</strong> Diagonal a 135 grados</li>
-            </ul>
-            
-            <h4>Sintaxis básica:</h4>
-            <code>background: linear-gradient(dirección, color1, color2, color3...);</code>
-            <code>background: radial-gradient(forma, color1, color2, color3...);</code>
-        </div>
-    </div>
-</body>
-</html> 
+    </div>   
